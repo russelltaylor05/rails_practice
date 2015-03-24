@@ -14,6 +14,25 @@ $gray-medium-light: #eaeaea;
 }
 
 
+#tinder img {height: 300px; width: auto; margin: 0 0 0 -400px; float: left;}
+#tinder li {padding: 0 0 0 400px; clear: both;}
+
+
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
 /* universal */
 
 html {
@@ -169,6 +188,19 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto !important;
 }
+
+
+
+pre {                      /* specify width  */
+	white-space: pre-wrap;                 /* CSS3 browsers  */
+	white-space: -moz-pre-wrap !important; /* 1999+ Mozilla  */
+	white-space: -pre-wrap;                /* Opera 4 thru 6 */
+	white-space: -o-pre-wrap;              /* Opera 7 and up */
+	word-wrap: break-word;                 /* IE 5.5+ and up */
+	/* overflow-x: auto; */                /* Firefox 2 only */
+	/* width: 99%; */		       /* only if needed */
+	}
+
 
 
 /* miscellaneous */

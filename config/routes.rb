@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   get 'help' => 'static_pages#help'
   get 'about' => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
+  get 'lob' => 'static_pages#lob'
+  get 'lob_send' => 'static_pages#lob_send'    
+  get 'tinder' => 'static_pages#tinder'    
   get 'signup' => 'users#new'
+
   
   
   resources :users  

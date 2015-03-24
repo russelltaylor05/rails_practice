@@ -1,0 +1,60 @@
+
+
+<% if !@results %>
+<%= form_tag("/lob", method: "get") do %>
+
+  <%= label_tag(:name, "Name:") %>
+  <%= text_field_tag(:name) %>
+
+  <%= label_tag(:address_line1, "Address:") %>
+  <%= text_field_tag(:address_line1) %>
+
+  <%= label_tag(:address_line2, "Address:") %>
+  <%= text_field_tag(:address_line2) %>
+
+  <%= label_tag(:city, "City:") %>
+  <%= text_field_tag(:city) %>
+
+  <%= label_tag(:state, "State:") %>
+  <%= text_field_tag(:state) %>
+
+  <%= label_tag(:country, "Country:") %>
+  <%= text_field_tag(:coutry) %>
+
+  <%= label_tag(:zip, "Zip:") %>
+  <%= text_field_tag(:zip) %>
+
+
+  <%= hidden_field_tag(:submitted, true) %>
+  <%= submit_tag("Add Address") %>
+<% end %>
+<% end %>
+
+
+
+<h1>Current Addresses</h1>
+
+<table>
+<tr>
+<th>ID</th>
+<th>name</th>
+</tr>
+<% @currentAddresses.each do |addr| %>
+<tr>
+   <% addr.each do |a| %>
+   <% if a[0] != "date_created" && a[0] != "date_modified" %>
+    <td><%= a[1] %></td>
+    <% end %>
+    <% end %>
+    
+</li>
+<% end %>
+</table>
+
+
+<h2>API Response</h2>
+<pre>
+<code>
+  <%= @results %>
+</code>
+</pre>

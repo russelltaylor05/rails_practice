@@ -9,3 +9,15 @@
     </section>
   </aside>
 </div>
+
+<div>
+  <h2>User Collections</h2>
+  <ul>
+  <% @collections.each do |col| %>  
+    <li>
+      <h3><%= col.name %></h3>
+      <p><%= col.content %></p>
+    </li>
+  <% end %>
+  </ul>
+</div>

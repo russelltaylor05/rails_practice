@@ -1,0 +1,14 @@
+<% provide(:title, 'Collections') %>
+
+
+<h1>Here are all the Collections</h1>
+
+<ul>
+<% @collections.each do |col| %>
+<li>
+    <%= link_to col.name, col %> -
+    <%= col.id %> - 
+    <%= col.content %>    
+</li>
+<% end %>
+</ul>

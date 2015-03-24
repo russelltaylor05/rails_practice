@@ -1,0 +1,36 @@
+
+
+<% if !@results %>
+<%= form_tag("/lob_send", method: "get") do %>
+
+  <%= label_tag(:name, "Name:") %>
+  <%= text_field_tag(:name) %>
+  
+  <%= label_tag(:to, "TO:") %>
+  <%= select_tag(:to, options_for_select(@selectAddr)) %>
+
+  <%= label_tag(:from, "From:") %>
+  <%= select_tag(:from, options_for_select(@selectAddr)) %>
+
+  <%= label_tag(:front, "Front:") %>
+  <%= text_field_tag(:front) %>
+
+  <%= label_tag(:message, "Message:") %>
+  <%= text_field_tag(:messag) %>
+
+
+
+  <%= hidden_field_tag(:submitted, true) %>
+  <%= submit_tag("Send Mail") %>
+<% end %>
+<% end %>
+
+
+
+
+<h2>API Response</h2>
+<pre>
+<code>
+  <%= @results %>
+</code>
+</pre>

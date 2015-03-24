@@ -1,0 +1,21 @@
+
+
+<ul id="tinder">
+<% @nearby['results'].each do |near| %>
+<li class="clearfix">
+<%= image_tag(near['photos'][0]['url'], :alt => "rss feed") %>
+<p><%= near['name'] %></p>
+<p><%= near['_id'] %></p>
+</li>
+
+<% end %>
+</ul>
+
+<h2>API Response</h2>
+<pre>
+<code>
+  <%= @user1 %>  
+  
+  <%= @results %>
+</code>
+</pre>
